@@ -1,0 +1,151 @@
+:root {
+    --bg-color: #1A1A1A;
+    --violet: #8338ec;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: "Syne", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-bottom: 3rem;
+    
+}
+
+.header button{
+    background-color: var(--violet);
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem;
+    box-shadow: 5px 5px 10px black;
+}
+
+.header button:hover {
+    background-color: #6d37b8;
+}
+
+.header input {
+    flex-basis: 500px;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1.5px solid var(--violet);
+    background: transparent;
+    color: white;
+}
+
+.header input::placeholder {
+    color: white;
+}
+
+.header input:focus {
+    outline: none;
+}
+
+.todos {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+div[class^="todo-"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    background-color: var(--violet);
+    padding: 10px;
+    margin-bottom: 1rem;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px black;
+  }
+
+div[class^="todo-"] .content {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+div[class^="todo-"] .content .todo-checkbox{
+    height: 1.5rem;
+    width: 1.5rem;
+    accent-color: rgb(0, 255, 0);
+
+}
+
+div[class^="todo-"] button {
+    margin: 1em;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    border: none;
+    box-shadow: 3px 2px 5px black;
+    font-weight: bold;
+}
+
+div[class^="todo-"] button:hover {
+    opacity: 0.9;
+}
+
+div[class^="todo-"] h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 20px;
+    border: none;
+}
+
+
+
+div[class^="todo-"] input {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-wrap: wrap;
+    flex: 1;
+    padding: 0.7rem 1rem 0.7rem;
+    margin-left: 0.7rem;
+    border-radius: 25px;
+    border: 1px solid white;
+    background: transparent;
+    color: #ffffff;
+    max-width: 100%;
+}
+
+div[class^="todo-"] input:focus {
+    outline: none;
+}
+
+@media (max-width: 400px) {
+    .header input {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+
+    div[class^="todo-"] input {
+        margin: 0.7rem 0; 
+    }
+
+    div[class^="todo-"] {
+        flex-direction: column;
+    }
+
+    div[class^="todo-"] button {
+        margin-top: 0.5rem;
+    }
+}
